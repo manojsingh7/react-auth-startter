@@ -54,7 +54,7 @@ function Login() {
       />
       <button onClick={() => login()}>Login</button>
 
-      <Link to="/resgister">Register</Link>
+      <Link to="/register">Register</Link>
     </div>
   );
 }
