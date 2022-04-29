@@ -1,7 +1,9 @@
 import { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "src/Pages/Home";
 import Login from "../Pages/Login";
 import AuthRoute from "./AuthRoute";
+import ProtectedRoute from "./ProtectedRoute";
 
 function AppRouter() {
   return (
@@ -14,6 +16,14 @@ function AppRouter() {
               <AuthRoute>
                 <Login />
               </AuthRoute>
+            }
+          />
+          <Route
+            path={"/home"}
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
             }
           />
         </Routes>

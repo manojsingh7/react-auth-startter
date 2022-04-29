@@ -1,6 +1,5 @@
-import { useContext } from "react";
 import { Navigate, RouteProps } from "react-router-dom";
-import { AuthContext } from "../Contexts/AuthContextProvider";
+import { getAuthValue } from "src/Modules/AuthModule/Hooks/useAuthValue";
 
 export type ProtectedRouteProps = {
   authenticationPath?: string;
@@ -9,7 +8,7 @@ export type ProtectedRouteProps = {
 
 function ProtectedRoute(props: ProtectedRouteProps) {
   const { authenticationPath = "/", children } = props;
-  const { loggedIn } = useContext(AuthContext);
+  const { loggedIn } = getAuthValue();
 
   if (loggedIn) {
     return children;
