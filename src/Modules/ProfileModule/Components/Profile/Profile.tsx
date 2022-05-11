@@ -22,6 +22,8 @@ function Profile() {
           <p>Email : {profileDetails?.email}</p>
           <p>City : {profileDetails?.city}</p>
           <p>Name : {profileDetails?.firstName}</p>
+          <p>Country : {profileDetails?.country}</p>
+          <p>CountryCode : {profileDetails?.countryCode}</p>          
         </div>
       }
     </Fragment>
