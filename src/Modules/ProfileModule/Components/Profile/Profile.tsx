@@ -18,7 +18,7 @@ function Profile() {
     <Fragment>
       {
         <div>
-          <Button onClick={logout}>Logout</Button>
+          <Button onClick={logout}>Signout</Button>
           <p>Email : {profileDetails?.email}</p>
           <p>City : {profileDetails?.city}</p>
           <p>Name : {profileDetails?.firstName}</p>
